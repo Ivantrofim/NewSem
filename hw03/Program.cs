@@ -1,11 +1,14 @@
-﻿//                             Задача 19  ??????
+﻿//                      Задачи 19 - 38
+
+
+//                             Задача 19 
 
 // Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 // 14212 -> нет
 // 12821 -> да
 // 23432 -> да
 
-
+/*
 Console.Write("Введите пятизначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -31,7 +34,7 @@ if (Num1 == Num5 && Num2 == Num4)
     Console.Write("Палиндром");
 else
     Console.Write("Не палиндром");  
-
+*/
 
 
 //                             Задача 23
@@ -104,6 +107,43 @@ Console.WriteLine(a);
 //Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
+
+
+
+//                   Пользовательский ввод длины массива
+/*               
+void FillArray(int[] collection)
+{
+    int length = collection.Length;
+    int index = 0;
+    while(index < length)
+    {
+        collection[index] = new Random().Next(1,40);
+        index++;
+    }
+}
+
+void PrintArray(int[] col)
+{
+    int count = col.Length;
+    int position = 0;
+    while(position < count)
+    {
+        Console.Write(" " + col[position]);
+        position++;
+    }
+}
+
+Console.Write("Input size of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+int[] array = new int[size];
+
+FillArray(array);
+PrintArray(array);
+*/
+
+//           Пользовательский ввод длины массива, максимума и минимума массива
 /*
 int[] CreateRandomArray(int size, int minValue, int maxValue)
 {
@@ -230,7 +270,7 @@ Console.Write(FindSum(array));
 */
 
 
-//                                 Задача 38:   ?????
+//                                 Задача 38:   
 // Задайте массив вещественных чисел. 
 // Найдите разницу между максимальным и минимальным элементов массива.
 
