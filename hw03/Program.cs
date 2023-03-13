@@ -6,9 +6,31 @@
 // 23432 -> да
 
 
+Console.Write("Введите пятизначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
 
+if(num < 10000 || num > 100000)
+   Console.Write("Вы ввели неверное число. Уточните условие");
 
+int num1 = num / 10;
+int Num1 = num % 10;
 
+int num2 = num1 / 10;
+int Num2 = num1 % 10;
+
+int num3 = num2 / 10;
+int Num3 = num2 % 10;
+
+int num4 = num3 / 10;
+int Num4 = num3 % 10;
+
+int num5 = num4 / 10;
+int Num5 = num4 % 10;
+
+if (Num1 == Num5 && Num2 == Num4)
+    Console.Write("Палиндром");
+else
+    Console.Write("Не палиндром");  
 
 
 
@@ -37,13 +59,43 @@ Qube(n);
 
 
 
-//                           Задача 27: ??????
+//                           Задача 27: 
 // Напишите программу, которая принимает на вход число 
 // и выдаёт сумму цифр в числе.
 
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
+
+
+/*                               Через метод
+int FindSumNumbers(int num)
+{
+    if( num < 10) return num;
+    int current = num % 10;
+    int sum = num / 10;
+    return current + FindSumNumbers(sum);
+}
+
+Console.Write("Input number: ");
+int Sum = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(FindSumNumbers(Sum));
+*/
+
+/*                             Второе решение
+Console.Write("Input number: ");
+int Sum = Convert.ToInt32(Console.ReadLine());
+
+int a = 0;
+while(Sum > 0)
+    {
+        a = a + Sum % 10;
+        Sum = Sum / 10;
+    }
+Console.WriteLine(a);
+*/
+
+
 
 
 
@@ -217,7 +269,7 @@ Console.Write(MaxNumber(array));
 */
 
 
-
+/*
 int[] CreateRandomArray(int size, int minValue, int maxValue)
 {
     int[] newArray = new int[size];
@@ -272,3 +324,4 @@ int Difference = MaxNumber(array) - MinNumber(array);
 Console.WriteLine($"минимальное число " + MinNumber(array));
 Console.WriteLine($"максимальное число " + MaxNumber(array));
 Console.WriteLine($"разница между числами " + Difference);
+*/

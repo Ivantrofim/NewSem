@@ -109,7 +109,8 @@ while(index <= num)
 // 782 -> 8
 // 918 -> 1
 
-/*
+/*     
+//                    Решение задачи через рандом
 void Number()
 {
     int num = new Random().Next(100, 1000);
@@ -124,9 +125,28 @@ void Number()
 Number();
 */
 
+//                   Решение через ввод пользователем
 
+/*
+void Number()
+{
+    Console.Write("Input threeDigits number : ");
+    int num = Convert.ToInt32(Console.ReadLine());
 
-
+    if(num < 100 || num > 1000)
+    {
+       Console.WriteLine("Uncorrect digit");
+    }
+    else
+    {
+    int num1 = num / 10;
+    int num2 = num1 / 10;
+    int secondDigit = num1 % 10;
+    Console.WriteLine("Вторая цифра " + secondDigit);
+    }
+}
+Number();
+*/
 
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа 
 // Или сообщает, что третьей цифры нет.
